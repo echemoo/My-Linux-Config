@@ -11,9 +11,12 @@ local keymap_list = {
   { key = "d", action = "remove" },
   { key = "r", action = "rename" },
   { key = "I", action = "toggle_git_ignored" },
-  { key = "R", action = "collapse_all" },
+  { key = "R", action = "refresh" },
   { key = "?", action = "toggle_help" },
   { key = "<CR>", action = "cd" },
+
+  { key = "W", action = "collapse_all" },
+  { key = "E", action = "expand_all" },
 }
 
 require 'nvim-tree'.setup {
