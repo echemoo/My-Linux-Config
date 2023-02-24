@@ -65,6 +65,8 @@ lua require('gitsigns').setup{}
 lua require('nvim-autopairs').setup{}
 lua require('spellsitter').setup{}
 
+lua require 'usr.nvim-neotest'
+
 " 加载 vim 配置, 参考 https://github.com/jdhao/nvim-config
 let s:core_conf_files = [
       \ 'misc.vim',

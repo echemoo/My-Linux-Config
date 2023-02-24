@@ -95,6 +95,7 @@ wk.register({
       f = { "<cmd>call CocActionAsync('format')<cr>", "format current buffer" },
       n = { "<Plug>(coc-rename)", "rename" },
       r = { "<cmd>call QuickRun()<cr>", "run code" },
+      t = { "<cmd>lua require('neotest').run.run()<cr>", "run unit test" },
       p = { "<cmd>call Preivew()<cr>", "preview" },
     },
     -- o 被 orgmode 使用
