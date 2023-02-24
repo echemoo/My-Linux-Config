@@ -1,6 +1,6 @@
 -- change default mappings
 local keymap_list = {
-  { key = { "<CR>", "o", "l", "<2-LeftMouse>" }, action = "edit" },
+  { key = { "o", "l", "<2-LeftMouse>" }, action = "edit" },
   { key = "h", action = "close_node" },
   { key = "p", action = "preview" },
   { key = "<C-r>", action = "refresh" },
@@ -13,9 +13,28 @@ local keymap_list = {
   { key = "I", action = "toggle_git_ignored" },
   { key = "R", action = "collapse_all" },
   { key = "?", action = "toggle_help" },
+  { key = "<CR>", action = "cd" },
 }
 
 require 'nvim-tree'.setup {
+  filters = {
+      -- 不显示 .git 目录中的内容
+      custom = {
+          ".git/",
+          ".bloop"
+      },
+      -- 显示 .gitignore
+      exclude = {
+          ".gitignore"
+      },
+      -- 不显示隐藏文件
+      dotfiles = true
+  },
+
+  renderer = {
+    group_empty = true,
+  },
+
   view = {
     side = 'right',
     mappings = {
@@ -23,6 +42,7 @@ require 'nvim-tree'.setup {
       list = keymap_list
     },
   },
+
   actions = {
     open_file = {
       quit_on_open = false,
@@ -32,3 +52,4 @@ require 'nvim-tree'.setup {
     }
   },
 }
+
