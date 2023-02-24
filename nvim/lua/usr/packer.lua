@@ -105,7 +105,10 @@ require("packer").startup({
         "antoinemadec/FixCursorHold.nvim"
       }
     }
-    -- use 'nvim-neotest/neotest-plenary'
     use 'rouge8/neotest-rust'
+    -- for Debug
+    use 'mfussenegger/nvim-dap'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use 'theHamsta/nvim-dap-virtual-text'
   end,
 })

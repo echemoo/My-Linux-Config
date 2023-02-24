@@ -72,6 +72,24 @@ wk.register({
       -- c = { "<cmd>BDelete hidden<cr>", "close invisible buffers" },
       d = { "<cmd>bdelete %<cr>", "close current buffers" },
     },
+    d = {
+      name = "+debug",
+      c = { "<cmd>lua require('dap').continue()<cr>", "continue" },
+      s = { "<cmd>lua require('dap').step_into()<cr>", "step into" },
+      n = { "<cmd>lua require('dap').step_over()<cr>", "step over" },
+      b = { "<cmd>lua require('dap').toggle_breakpoint()<cr>", "toggle breakpoint" },
+      r = { "<cmd>lua require('dap').repl.open()<cr>", "open repl status" },
+      q = { function()
+	      require('dap').close();
+	      require('dapui').close();
+	      require('dap').repl.close();
+      end, "stop debug mode" },
+
+      -- ["1"] = { "<cmd>lua require('dap.ui.widgets').hover()<cr>", "open repl status" },
+      -- ["2"] = { "<cmd>lua require('dap.ui.widgets').preview()<cr>", "open repl status" },
+      -- ["3"] = { "<cmd>lua require('dap.ui.widgets').centered_float(require('dap.ui.widgets').frames)<cr>", "open widgets frames" },
+      -- ["4"] = { "<cmd>lua require('dap.ui.widgets').centered_float(require('dap.ui.widgets').scopes)<cr>", "open widgets scopes" },
+    },
     f = {
       name = "+file",
       o = { "<cmd>NvimTreeFindFile<cr>", "open file in dir" },
