@@ -51,8 +51,6 @@ set foldexpr=nvim_treesitter#foldexpr()
 " 加载 lua 配置
 lua require 'usr'
 
-lua require 'usr.nvim-neotest'
-
 " 加载 vim 配置, 参考 https://github.com/jdhao/nvim-config
 let s:core_conf_files = [
       \ 'misc.vim',
