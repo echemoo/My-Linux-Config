@@ -88,3 +88,5 @@ nn xx x
 " for echemoo
 set tabstop=2
 set expandtab
+
+let g:mkdp_port="9495"
