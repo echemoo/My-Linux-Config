@@ -92,3 +92,4 @@ set tabstop=2
 
 " markdownprew 固定从端口运行，便于终端远程编写 markdown 实时预览
 let g:mkdp_port="9495"
+let g:mkdp_open_to_the_world = 1
