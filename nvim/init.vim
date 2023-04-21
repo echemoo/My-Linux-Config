@@ -85,6 +85,10 @@ noremap <Space>bc :BDelete hidden<cr>
 " 因为 nvim-treesitter-textobjects 使用 x 来跳转，原始的 x 被映射为 xx
 nn xx x
 
+" for echemoo
 set expandtab
 set shiftwidth=2
 set tabstop=2
+
+" markdownprew 固定从端口运行，便于终端远程编写 markdown 实时预览
+let g:mkdp_port="9495"
